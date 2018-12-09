@@ -1,4 +1,4 @@
-Title="chain33"
+Title="local"
 TestNet=true
 FixTime=false
 
@@ -40,12 +40,12 @@ isParaChain=false
 enableTxQuickIndex=false
 
 [p2p]
-seeds=[]
+seeds=["chain33:13802","chain32:13802","chain31:13802"]
 enable=true
-isSeed=false
+isSeed=true
 serverStart=true
-innerSeedEnable=true
-useGithub=true
+innerSeedEnable=false
+useGithub=false
 innerBounds=300
 msgCacheSize=10240
 driver="leveldb"
@@ -54,9 +54,9 @@ dbCache=4
 grpcLogFile="grpc33.log"
 
 [rpc]
-jrpcBindAddr="localhost:8801"
-grpcBindAddr="localhost:8802"
-whitelist=["127.0.0.1"]
+jrpcBindAddr="0.0.0.0:8801"
+grpcBindAddr="0.0.0.0:8802"
+whitelist=["localhost","127.0.0.1","0.0.0.0"]
 jrpcFuncWhitelist=["*"]
 grpcFuncWhitelist=["*"]
 
